@@ -84,7 +84,7 @@ Go 程序员的日常生活需要使用终端。本章将解释什么是终端�
 
 默认情况下，您不能在 Windows 计算机上使用 bash。这不是问题，但这意味着您必须为每个 macOS/Linux 命令找到等效的 Windows 命令。它在某些时候可能很麻烦，因为网络上的许多示例和教程并不总是为 Windows 提供等效性。
 
-Microsoft 宣布您现在可以在您的 Windows 计算机上安装 “Linux 的 Windows 子系统”（WSL）。这是一个好消息，因为您将可以使用 bash。您可以在 Microsoft 网站上找到安装说明：https://docs.microsoft.com/en-us/windows/wsl/install-win10（适用于 Windows 10）。
+Microsoft 宣布您现在可以在您的 Windows 计算机上安装 “Linux 的 Windows 子系统”（WSL）。这是一个好消息，因为您将可以使用 bash。您可以在 Microsoft 网站上找到安装说明：https://docs.microsoft.com/en-us/windows/wsl/install-win10 （适用于 Windows 10）。
 
 我强烈建议你安装这个，因为它将使你的生活更轻松，即使我在接下来的章节中试图给 Windows 的基本命令提供等价命令。
 
