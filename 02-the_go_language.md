@@ -74,7 +74,7 @@ Go 的创造者将他们的精力集中在几个关键的设计选择上：
 * 该项目发展非常迅速，现在已经有超过一千名贡献者<sup>[3](#contributors)</sup>。
 * 在撰写本文时（2020 年 1 月 8 日），Go 的最新版本是 1.15.6。
 * 组织了许多聚会和会议来联合社区<sup>[4](#community)</sup>
-  - 2018 年共组织了 19 个会议：3 个在美国，16 个在其他国家<sup>[5](#countries)
+  - 2018 年共组织了 19 个会议：3 个在美国，16 个在其他国家<sup>[5](#countries)</sup>
   - 2017 年共举办 13 场会议
 * Go 是开发人员想要的：
   - 在 2018、2019 和 2020 年的 Stackoverflow 开发人员调查中，Go 是最受欢迎的三种编程语言 [[@dev-survy-2018]][3] 之一。
@@ -113,11 +113,11 @@ Go 的创造者将他们的精力集中在几个关键的设计选择上：
 
 <hr>
 
-<a name="gophers">1</a>: 这是 Go 程序员的昵称。
-<a name="concurrency">2</a>: 我们将在另一章中更深入地探讨这个概念。定义取自：https://en.wikipedia.org/wiki/Concurrency_(computer_science)
-<a name="contributors">3</a>: 2019 年 8 月 13 日，Go 项目有 1,349 名贡献者。
-<a name="community">4</a>: 请参阅此页面：https://github.com/golang/go/wiki/Conferences
-<a name="countries">5</a>: 这些数字是 2019 年 8 月 13 日从网页 https://github.com/golang/go/wiki/Conferences 中提取的。
+* <a name="gophers">1</a>: 这是 Go 程序员的昵称。
+* <a name="concurrency">2</a>: 我们将在另一章中更深入地探讨这个概念。定义取自：https://en.wikipedia.org/wiki/Concurrency_(computer_science)
+* <a name="contributors">3</a>: 2019 年 8 月 13 日，Go 项目有 1,349 名贡献者。
+* <a name="community">4</a>: 请参阅此页面：https://github.com/golang/go/wiki/Conferences
+* <a name="countries">5</a>: 这些数字是 2019 年 8 月 13 日从网页 https://github.com/golang/go/wiki/Conferences 中提取的。
 
 [1]: https://www.practical-go-lessons.com/chap-2-the-go-language#go-at-google
 [2]: https://www.practical-go-lessons.com/chap-2-the-go-language#pike2009go
