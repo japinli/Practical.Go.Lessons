@@ -8,7 +8,7 @@
 ### [第 1 章 - 计算机编程][01]
 ### [第 2 章 - Go 语言][02]
 ### [第 3 章 - 终端][03]
-### 第 4 章 - 搭建开发环境
+### [第 4 章 - 搭建开发环境][04]
 ### 第 5 章 - 第一个 Go 程序
 ### 第 6 章 - 二进制和十进制
 ### 第 7 章 - 十六进制、八进制、ASCII、UTF8、Unicode、Runes
@@ -52,3 +52,4 @@
 [01]: ./01-programming_a_computer.md
 [02]: ./02-the_go_language.md
 [03]: ./03-the_terminal.md
+[04]: ./04-setup_your_dev_environment.md
