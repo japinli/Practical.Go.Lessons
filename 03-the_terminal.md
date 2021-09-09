@@ -29,7 +29,7 @@ Go 程序员的日常生活需要使用终端。本章将解释什么是终端�
 
 ## 5 命令行界面（CLI）
 
-图形用户界面并不总是存在。第一台计算机就没有这样的能力。但是这些计算机的用户是如何设法启动和使用程序的呢？计算机附带了命令行界面。此接口也称为“shell”。shell 是一种可以向操作系统传递命令的程序<sup>1(#shell)</sup>。Shell 是指定此类程序的通用术语。最著名的 shell 是 bash（Bourne Again Shell）。Bash 默认随 macOS 和绝大多数 Linux 发行版一起提供。默认情况下，Windows 也附带一个 shell（但它不是 bash）。
+图形用户界面并不总是存在。第一台计算机就没有这样的能力。但是这些计算机的用户是如何设法启动和使用程序的呢？计算机附带了命令行界面。此接口也称为“shell”。shell 是一种可以向操作系统传递命令的程序<sup>[1](#shell)</sup>。Shell 是指定此类程序的通用术语。最著名的 shell 是 bash（Bourne Again Shell）。Bash 默认随 macOS 和绝大多数 Linux 发行版一起提供。默认情况下，Windows 也附带一个 shell（但它不是 bash）。
 
 ## 6 如何与 shell 交互：终端
 
@@ -76,7 +76,7 @@ Go 程序员的日常生活需要使用终端。本章将解释什么是终端�
 
 #### 6.3.1 Cmder
 
-终端和 Windows shell 在今天的基础上不是很实用。我建议您安装 cmder<sup>2(#cmder)</sup> 以使您的开发人员在 Windows 上的生活更轻松。Cmder 是一个模拟器，允许您使用 Linux/MacOS 上可用的命令。安装过程很简单（在 GitHub 上下载最新版本）然后启动安装向导即可。
+终端和 Windows shell 在今天的基础上不是很实用。我建议您安装 cmder<sup>[2](#cmder)</sup> 以使您的开发人员在 Windows 上的生活更轻松。Cmder 是一个模拟器，允许您使用 Linux/MacOS 上可用的命令。安装过程很简单（在 GitHub 上下载最新版本）然后启动安装向导即可。
 
 安装 cmder 后，启动程序 “Cmder” 打开你的全新终端。
 
