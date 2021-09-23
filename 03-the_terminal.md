@@ -137,7 +137,7 @@ $ pwd
 
 ![Windows terminal](./images/dir_win_list.637cccac.png)
 
-每行将代表一个文件或一个目录。如果是目录，第三列有 “<DIR>”。如果它是文件，则什么都没有。
+每行将代表一个文件或一个目录。如果是目录，第三列有 “&lt;DIR&gt;”。如果它是文件，则什么都没有。
 
 ### 7.4 Windows（带有 WSL 和 Cmder）
 
