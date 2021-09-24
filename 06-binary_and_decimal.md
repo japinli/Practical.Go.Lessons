@@ -130,7 +130,7 @@ $ 123.45 = 1 \times 10^{2} + 2 \times 10^{1} + 3 \times 10^{0} + 4 \times \frac{
 
 ![\frac{1}{10^{2}} = \frac{1}{100} = 0.01](https:////latex.codecogs.com/svg.latex?\frac{1}{10^{2}}=\frac{1}{100}=0.01)
 
-<img src="https://latex.codecogs.com/gif.latex?\frac{1}{10^{2}}&space;=&space;\frac{1}{100}&space;=&space;0.01" title="\frac{1}{10^{2}} = \frac{1}{100} = 0.01" />
+<img src="https://latex.codecogs.com/gif.latex?\bg_white&space;\frac{1}{10^{2}}&space;=&space;\frac{1}{100}&space;=&space;0.01" title="\frac{1}{10^{2}} = \frac{1}{100} = 0.01" />
 
 $ \frac{1}{10^{2}} = \frac{1}{100} = 0.01 $，因此 $ 5 \times \frac{1}{10^{2}} = 0.05 $
 <hr>
