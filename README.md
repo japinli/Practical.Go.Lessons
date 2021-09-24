@@ -10,7 +10,7 @@
 ### [第 3 章 - 终端][03]
 ### [第 4 章 - 搭建开发环境][04]
 ### [第 5 章 - 第一个 Go 程序][05]
-### 第 6 章 - 二进制和十进制
+### [第 6 章 - 二进制和十进制][06]
 ### 第 7 章 - 十六进制、八进制、ASCII、UTF8、Unicode、Runes
 ### 第 8 章 - 变量、常量和基本类型
 ### 第 9 章 - 控制语句
@@ -54,3 +54,4 @@
 [03]: ./03-the_terminal.md
 [04]: ./04-setup_your_dev_environment.md
 [05]: ./05-first_go_application.md
+[06]: ./06-binary_and_decimal.md
