@@ -128,6 +128,8 @@ $ 123.45 = 1 \times 10^{2} + 2 \times 10^{1} + 3 \times 10^{0} + 4 \times \frac{
 
 这是有道理的，因为：$ \frac{1}{10^{1}} = \frac{1}{10} = 0.1 $，因此 $ 4 \times \frac{1}{10^{1}} = 0.4 $
 
+![\frac{1}{10^{2}} = \frac{1}{100} = 0.01](https:////latex.codecogs.com/svg.latex?\frac{1}{10^{2}}=\frac{1}{100}=0.01)
+
 $ \frac{1}{10^{2}} = \frac{1}{100} = 0.01 $，因此 $ 5 \times \frac{1}{10^{2}} = 0.05 $
 <hr>
 
