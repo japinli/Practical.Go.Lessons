@@ -68,33 +68,33 @@
 
 让我们更进一步。我们可以用数字十来写数字一百：
 
-<p style="center">100 = 10 × 10</p>
+$$ 100 = 10 \times 10 $$
 
 我们可以使用十的幂：
 
-<p style="center">10 × 10 = 10<sup>2</sup></p>
+$$ 10 \times 10 = 10^2 $$
 
-10<sup>2</sup> 等价于 10 × 10。我们将 10 视为基数，而 2 视为指数。当我们读它的时候，我们说它是 10 的 2 幂。根据这种规则，我们可以按如下方式表示：
+$ 10^2 $ 等价于 $ 10 \times 10 $。我们将 10 视为基数，而 2 视为指数。当我们读它的时候，我们说它是 10 的 2 幂。根据这种规则，我们可以按如下方式表示：
 
-<p style="center">10 = 10<sup>1</sup></p>
+$$ 10 = 10^1 $$
 
 和
 
-<p style="center">1 = 10<sup>0</sup></p>
+$$ 1 = 10^0 $$
 
 最后一个可能看起来很奇怪。这是一条数学规则：任何数的 0 次幂都等于 1。
 
 有了上面的基础，我们可将数字 123 分解成 10 的幂来计数：
 
-<p style="center">123 = 1 × 10<sup>2</sup> + 2 × 10<sup>1</sup> + 3 × 10<sup>0</sup></p>
+$$ 123 = 1 \times 10^2 + 2 \times 10^1 + 3 \times 10^0 $$
 
-如果您从左到右依次读取 1 × 10<sup>2</sup> + 2 × 10<sup>1</sup> + 3 × 10<sup>0</sup>，您会发现 10 的幂依次递减。
+如果您从左到右依次读取 $ 1 \times 10^2 + 2 \times 10^1 + 3 \times 10^0 $，您会发现 10 的幂依次递减。
 
 这个次幂数往往与数字写下时的位置相对应。
 
-* 数字 “1” 在位置 2 处（1 × 10<sup>2</sup>）
-* 数字 “2” 在位置 1 处（2 × 10<sup>1</sup>）
-* 数字 “3” 在位置 0 处（3 × 10<sup>0</sup>）
+* 数字 “1” 在位置 2 处（$ 1 \times 10^2 $）
+* 数字 “2” 在位置 1 处（$ 2 \times 10^1 $）
+* 数字 “3” 在位置 0 处（$ 3 \times 10^0 $）
 
 我计算位置的方式可能会让您感到惊讶。您预计可能是这样的：
 
@@ -110,11 +110,11 @@
 
 对于给定的数字：
 
-<p style="center">digit<sub>2</sub>digit<sub>1</sub>digit<sub>0</sub></p>
+$$ digit_{2}digit_{1}digit_{0} $$
 
 对应的数字（数量）为：
 
-<p style="center">digit<sub>2</sub> × 10<sup>2</sup> + digit<sub>1</sub> × 10<sup>1</sup> + digit<sub>0</sub> × 10<sup>0</sup></p>
+$$ digit_2 \times 10^2 + digit_1 \times 10^1 + digit_0 \times 10^0 $$
 
 当然，这种关系对多于（或少于）三位数的数字仍然有效！
 
@@ -124,16 +124,19 @@
 
 它们同样与 10 的幂有关联。
 
-$ 123.45 = 1 \times 10^{2} + 2 \times 10^{1} + 3 \times 10^{0} + 4 \times \frac{1}{10^{1}} + 5 \times \frac{1}{10^{2}} $
+$$
+123.45 = 1 \times 10^{2} + 2 \times 10^{1} + 3 \times 10^{0} + 4 \times \frac{1}{10^{1}} + 5 \times \frac{1}{10^{2}}
+$$
 
 这是有道理的，因为：$ \frac{1}{10^{1}} = \frac{1}{10} = 0.1 $，因此 $ 4 \times \frac{1}{10^{1}} = 0.4 $
 
-![\frac{1}{10^{2}} = \frac{1}{100} = 0.01](https:////latex.codecogs.com/svg.latex?\frac{1}{10^{2}}=\frac{1}{100}=0.01)
-
-<img src="https://latex.codecogs.com/gif.latex?\bg_white&space;\frac{1}{10^{2}}&space;=&space;\frac{1}{100}&space;=&space;0.01" title="\frac{1}{10^{2}} = \frac{1}{100} = 0.01" />
+$
+\frac{1}{10^{2}} = \frac{1}{100} = 0.01
+$
 
 $ \frac{1}{10^{2}} = \frac{1}{100} = 0.01 $，因此 $ 5 \times \frac{1}{10^{2}} = 0.05 $
+
 <hr>
 
-* <a name="numeral">1</a>：https://www.encyclopedia.com/social-sciences-and-law/economics-business-and-labor/businesses-and-occupations/numeration-systems
-* <a name="译1">译1</a>：此处原文为 “one hundred two thousand and three”，实际上应该是 “123”。
+* <span id="numeral">1</span>：https://www.encyclopedia.com/social-sciences-and-law/economics-business-and-labor/businesses-and-occupations/numeration-systems
+* <span id="译1">译1</span>：此处原文为 “one hundred two thousand and three”，实际上应该是 “123”。
