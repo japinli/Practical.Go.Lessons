@@ -293,7 +293,7 @@ ASCII 允许您对 128 个不同的字符进行编码。对于每个字符，我
 
 ![USASCII-code-chart](./images/ASCII_code_chart.6d7fcb54.png)
 
-在上图中，您可以看到 USASCII 代码图表。此表允许您将字节转换为字符。例如，字母 B 相当于 1000010（二进制）（第 4 列，第 2 行）
+在上图中<sup>[1](#usascii-png)</sup>，您可以看到 USASCII 代码图表。此表允许您将字节转换为字符。例如，字母 B 相当于 1000010（二进制）（第 4 列，第 2 行）
 
 ## UTF-8 如何工作？
 
@@ -305,7 +305,7 @@ UTF-8 是一种可变宽度（**variable width**）的编码系统。这意味�
 
 在上图中您可以看到 UTF-8 的编码规则。一个字符可以编码为 1 到 4 个字节。
 
-可以仅使用一个字节进行编码的码点是从 U+0000 到 U+007F（包括在内）。该范围由 128 个字符组成。（从0到127，一共有128个数字）
+可以仅使用一个字节进行编码的码点是从 U+0000 到 U+007F（包括在内）。该范围由 128 个字符组成。（从 0 到 127，一共有 128 个数字<sup>[2](#hex-7f-to-decimal)</sup>）
 
 但是需要编码更多的字符！这就是为什么 UTF-8 的创建者有向系统添加字节的想法的原因。第一个附加字节以 1 和 0 开头；那些是固定的。它向解码器发出信号，我们现在使用 2 个字节来编码我们的字符，我们只需添加位 “110”。它对 UTF-8 解码器说：“小心；我们是 2 个字节！”。
 
@@ -322,3 +322,197 @@ UTF-8 是一种可变宽度（**variable width**）的编码系统。这意味�
 如果您已经了解了 3 个字节是如何工作的，那么了解系统如何使用 4 个字节应该没有问题。在我们的第一个字节中，我们将前五个位固定为 **11110**。然后我们有三个额外的字节。如果我们从总位数中减去固定位，我们就有 21 位可用。这意味着我们可以将码点从 U+10000 编码到 U+10FFFF。
 
 ## 12 字符串
+
+字符串是“一个字符序列”。例如，`"Test"` 是由 4 个不同字符组成的字符串：T, e, s 和 t。字符串很常用；我们使用它们在我们的程序中存储原始文本。它们通常是人类可读的。例如，应用程序用户的名字和姓氏是两个字符串。
+
+字符可以来自不同的字符集。如果使用字符集 ASCII，则必须从 128 个可用字符中进行选择。每个字符在字符集中都有一个对应的码点。正如我们之前看到的，码点是一个任意选择的无符号整数。字符串使用字节存储。我们以仅由 ASCII 字符组成的字符串为例：
+
+```
+Hello
+```
+
+单个字节可以存储每个字符。该字符串可以使用以下位存储：
+
+```
+01001000 01100101 01101100 01101100 01101111
+```
+
+![字符串 “Hello” 的二进制形式](./images/hello_ascii.436bf2ef.png)
+
+在 Go 中，字符串是不可变的，这意味着它们一旦创建就无法修改。
+
+## 13 字符串文字
+
+这里有两种类型的字符串文字：
+
+* **raw** 原始字符串文件。它们在反引号之间定义。
+  - **禁止字符是**
+    - 反引号
+  - **丢弃的字符是**
+    - 回车符（\r）
+* **interpreted** 解释字符串文件。它们在双引号之间定义。
+  - **禁止字符是**
+    - 换行符
+	- 未转义的双引号
+
+```
+// /hexadecimal-octal-ascii-utf8-unicode-runes/string-literals/main.go
+package main
+
+import "fmt"
+
+func main() {
+
+	raw := `spring rain:
+browsing under an umbrella
+at the picture-book store`
+	fmt.Println(raw)
+
+	interpreted := "i love spring"
+	fmt.Println(interpreted)
+}
+```
+
+你可以注意到在这段代码中，我们没有告诉 Go 我们使用哪个字符集。这是因为字符串文字是使用 **UTF-8 隐式编码的**。
+
+## 14 Runes
+
+在幕后，字符串是字节的集合。我们可以使用 for 循环遍历字符串的字节：
+
+![I love Golang](./images/program_example_rune.215430c5.png)
+
+输出：
+
+![I love Golang](./images/program_example_rune_output.f86cddf3.png)
+
+![I love Golang](./images/i_love_golang.325ee7cc.png)
+
+上图中的消息是 “I love Golang”，前两个字符是中文。
+
+该程序将遍历字符串的每个字符。在 for 循环中 v 是 `rune` 类型。`rune` 是一个内置类型，定义如下：
+
+```go
+// rune is an alias for int32 and is equivalent to int32 in all ways. It is
+// used, by convention, to distinguish character values from integer values.
+type rune = int32
+```
+
+一个 `rune` 代表一个 Unicode 码点。
+
+* Unicode 码点是数值。
+* 按照惯例，它们总是用以 `"U+X"` 的格式标注，其中 `X` 是码点的十六进制表示。`X` 应该有四个字符。
+* 如果 `X` 少于四个字符，我们添加零。
+* 例如：字符 `"o"` 的码点等于 111（十进制）。111 的十六进制为 6F。数值码点是 `U+006F`。
+
+要以常规格式打印码点，您可以使用格式动词 `"%U"`。
+
+![Unicode 码点字符串分解](./images/unicode_code_point.826cf683.png)
+
+请注意，您可以使用简单的引号来创建 rune：
+
+```go
+// /hexadecimal-octal-ascii-utf8-unicode-runes/rune/main.go
+package main
+
+import "fmt"
+
+func main(){
+    var aRune rune = 'Z'
+    fmt.Printf("Unicode Code point of &#39;%c&#39;: %U\n", aRune, aRune)
+}
+```
+
+## 15 自测
+
+### 15.1 问题
+
+1. 对或错: "785G" 是十六进制数值。
+2. 对或错：“785f” 和 “785F” 代表相同的数量。
+3. 表示十六进制数（带有大写字母）的格式化动词是什么？
+4. 用十进制表示数字的格式化动词是什么？
+5. 什么是码点？
+6. 填空。_______是字符集，_______是一种编码标准。
+7. 对或错：UTF-8 允许您编码比 ASCII 更少的字符。
+8. 我可以使用多少字节来使用 UTF-8 编码系统对字符进行编码？
+
+### 15.2 答案
+
+1. 对或错: "785G" 是十六进制数值。
+   1. 错
+   2. 字母 G 不是十六进制数字的一部分。
+   3. 但是，字母 A 到 F 是十六进制数的一部分。
+2. 对或错：“785f” 和 “785F” 代表相同的数量。
+   1. 对
+   2. 字母大写这一事实不会改变其含义。
+3. 表示十六进制数（带有大写字母）的格式化动词是什么？
+   1. `%X`
+4. 用十进制表示数字的格式化动词是什么？
+   1. `%d`
+5. 什么是码点？
+   1. 码点是一个数字值，用于标识字符集中的一个字符
+6. 填空。_______是一个字符集，_______是一种编码标准。
+   1. **Unicode** 是一个字符集，**UTF-8** 是一种编码标准。
+7. 对或错：UTF-8 允许您编码比 ASCII 更少的字符。
+   1. 错
+8. 我可以使用多少字节来使用 UTF-8 编码系统对字符进行编码？
+   1. 1 到 4 个字节
+   2. 取决于字符
+
+## 16 关键要点
+
+* 十六进制是一种类似于十进制和二进制的计数系统。
+* 使用十六进制，数字用 16 个字符 “0、1、2、3、4、5、6、7、8、9、A、B、C、D、E、F” 表示。
+* 使用 fmt 函数（`fmt.Sprintf` 和 `fmt.Printf`），您可以使用“格式化动词”来表示使用特定数字系统的数字。
+  - `%b` 二进制
+  - `%X` 和 `%x` 十六进制
+  - `%d` 十进制
+  - `%o` 八进制
+
+* **字符**，这是我们可以手写的东西，它传达了一种意义。例如：“-”、“A”、“a”。
+* **字符集**，这是一组不同的字符。您经常会看到或听到缩写 “charset”。
+* **码点**，字符集中的每个字符作为唯一标识该字符的等效数值。该数值是一个码点。
+* Unicode 是由 137.000+ 个字符组成的字符集。
+* 每个字符都有一个码点。例如 “A” 字符相当于代码点 `U+0041`。
+* ASCII 是一种只能编码 128 个字符的编码技术。
+* UTF-8 是一种编码技术，可以编码超过 100 万个字符。
+* 采用 UTF-8 编码，字符被编码为 1 到 4 个字节。
+* `rune` 是内置类型。
+* `rune` 表示字符的 Unicode 码点。
+* 您可以使用简单的引号创建 `rune`：`var aRune rune = 'Z'`。
+* 当您遍历一个字符串时，您将遍历 `rune`：
+  ```go
+  // /hexadecimal-octal-ascii-utf8-unicode-runes/iterate-over-string/main.go
+  package main
+
+  import "fmt"
+
+  func main() {
+	b := "hello"
+	for i := 0; i < len(b); i++ {
+		fmt.Println(b[i])
+	}
+	// will output :
+	// 104
+	// 101
+	// 108
+	// 108
+	// 111
+	// and NOT :
+	// h
+	// e
+	// l
+	// l
+	// o
+  }
+  ```
+* 在 Go 中，字符串是不可变的，这意味着它们一旦创建就无法更改。
+
+<hr>
+
+<span id="usascii-png">1</span>：来源：https://commons.wikimedia.org/wiki/File:USASCII_code_chart.png
+<span id="hex-7f-to-decimal">2</span>：十六进制的 7F 等于十进制的 127。
+
+## 参考书目
+
+* [unicodew3C] Ishida, Richard. 2018. “Character Encodings: Essential Concepts Character Encodings: Essential Concepts.” August 2018. https://www.w3.org/International/articles/definitions-characters/#unicode.
+* [unicodeNorm] “Unicode V11.0.” n.d. http://www.unicode.org/versions/Unicode11.0.0/.
