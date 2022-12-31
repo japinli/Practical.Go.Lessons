@@ -8,7 +8,7 @@
 - [第 5 章 - 第一个 Go 程序](05-first_go_application.md)
 - [第 6 章 - 二进制和十进制](06-binary_and_decimal.md)
 - [第 7 章 - 十六进制、八进制、ASCII、UTF8、Unicode、Runes](07-hexadecimal_octal_ascii_utf8_unicode_runes.md)
-- [第 8 章 - 变量、常量和基本类型]()
+- [第 8 章 - 变量、常量和基本类型](08-variables-constants-and-basic-types.md)
 - [第 9 章 - 控制语句]()
 - [第 10 章 - 函数]()
 - [第 11 章 - 包和导入]()
